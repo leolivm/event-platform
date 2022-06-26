@@ -2,8 +2,10 @@ import { useMutation } from '@apollo/client'
 import { useNavigate } from 'react-router-dom'
 import { FC, FormEvent, useState } from 'react'
 
-import { Logo } from '../components'
 import { mutationCreateSubscriber } from '../gql/mutationCreateSubscriber'
+
+import { Logo } from '../components'
+import bkgImg from '../assets/code-mockup.png'
 
 export const Subscribe: FC = () => {
   const [name, setName] = useState('')
@@ -73,7 +75,7 @@ export const Subscribe: FC = () => {
         </div>
       </div>
 
-      <img src="/src/assets/code-mockup.png" className="mt-10" alt="code" />
+      <img src={bkgImg} className="mt-10" alt="code" />
     </div>
   )
 }
